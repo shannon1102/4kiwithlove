@@ -10,82 +10,97 @@
 </head>
 <body>
     <!-- <h1 id="loveQuestion" style="font: Brush Script MT;">Thôi đừng có dỗi nữa mà :((</h1> -->
-    <div id="head-container">
-        <!-- <img src="logo.png"> -->
-        <h1 id="title">Hehe :3</h1>
-        <img src="khoc.gif" id="head-image" alt="status-image"  width="350" style="background-color: transparent"/>
-        <!-- <img src="" id="head-image" alt="status-image"  width="250" /> -->
+    <div id="container">
+        <div id="head-container">
+            <!-- <img src="logo.png"> -->
+            <p id="title">Nhớ anh nhiù ko:D</p>
+            <p id="message"></p>
+            <img src="./gif/khoc.gif" id="head-image" alt="status-image"  width="300" height="300"/>
+            <!-- <img src="" id="head-image" alt="status-image"  width="250" /> -->
+    
+        </div>
+        <div id="footer-gif">
+            <div id="vomong-div"> 
+                <img src="./gif/vomong.gif" alt="vomong" id="vomong-gif" width="450" height="550" />
 
+            </div>
+            <div id="namlen-div"    >
+                <img src="./gif/cat1.gif" alt="namlen" id="namlen-gif"  width="450" height="550"/>
+            </div>
+            
+            <!-- <img src="./gif/vomong.gif" alt="vomong" id="vomong"  width="450" /> -->
+        </div>
 
     </div>
-    <!-- <div>
-        <img src="logo.png">
-        <img src="khoc.gif" id="head-image" alt="status-image"  width="250" />
-        <img src="" id="head-image" alt="status-image"  width="250" />
-    </div> -->
-
-
-    <input type="button" id="btnYes" value="CÓ" onclick="yesClick()"/>
-    <input type="button" id="btnNo" value="KHÔNG" onmouseover="noHover()"/>
-
-    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" />
-    <img src="leuleu.gif" alt="this slowpoke moves"  width="250" />  -->
-    <img src="vomong.gif" alt="this slowpoke moves"  width="550" />
-    <img src="cat1.gif" alt="this slowpoke moves"  width="550" />
-    <img src="vomong.gif" alt="this slowpoke moves"  width="550" />
-    <!-- <img src="cat1.gif" alt="this slowpoke moves"  width="550" /> -->
-    <!-- <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="leuleu.gif" alt="this slowpoke moves"  width="250" />
-    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
-    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
-    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
-    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
-    <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="leuleu.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
-    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
-    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
-    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
-    <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="leuleu.gif" alt="this slowpoke moves"  width="250" /> -->
-    <!-- <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
-    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
-    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
-    <img src="cat1.gif" alt="this slowpoke moves"  width="250" /> -->
+    <input type="button" id="btnYes" value="Có! Nhớ anh đến chết <3" onclick="yesClick()"/>
+    <input type="button" id="btnNo" value="Không!!! Ghéttttt" onmouseover="noHover()"/>
+    <audio controls autoplay>
+        <source src="./audio/tinhyeukhunglong.mp3" type="audio/mpeg">
+    </audio>
+  
 </body>
 <script>
     let count = 0; 
     function yesClick() {
-        // alert("Tối nay, lên hồ chơi em nhé!");
-        document.getElementById("head-image").src = "tungtim.gif";
+        document.getElementById("head-image").src = "./gif/leuleu.gif";
+        document.getElementById("vomong-gif").src = "./gif/leuleu.gif";
+        document.getElementById("namlen-gif").src = "./gif/leuleu.gif";
+        document.getElementById("message").innerHTML = "Á Há Há :3 <br> Anh có nhớ emm đâu:33333";
+        document.getElementById("head-image").style.opacity = 1;
+        var yesBtn = document.getElementById("btnYes");
+        // var x = document.getElementById("myAudio");
+        // x.pause();
+        yesBtn.remove();
     }
 
     function noHover() {
         count++;
-        if(count <20 ) {
+        if(count <22 ) {
             if(count == 1) {
                 document.getElementById("btnYes").style.left =  "860px";
                 document.getElementById("btnYes").style.top =  "450px";
+              
             } 
-            if(count %4 == 0) {
+            if(count == 4 ) {
+                document.getElementById("message").innerHTML = "Vợ... :( <br>Đấm lưng cho em nè :(";
+                
+                document.getElementById("vomong-gif").style.opacity = 1;
+                document.getElementById("vomong-gif").src = "./gif/vomong.gif";
+                
+            }
+            if(count == 8 ) {
+                document.getElementById("message").innerHTML = "Thôi mà... :( <br> Cõng bé nè :(( ";
+                document.getElementById("vomong-gif").src = "./gif/cat1.gif";
+                document.getElementById("head-image").style.opacity = 1;
+
+            }
+            if(count == 12 ) {
+                document.getElementById("message").innerHTML = "Bế  bế em này... :(";
+                document.getElementById("head-image").style.opacity = 0;
+                document.getElementById("vomong-gif").src = "./gif/bexoayvong.gif";
+
+            }
+            if(count == 16 ) {
+                document.getElementById("message").innerHTML = "Ôm emm này... :(";
 
 
             }
-            var x = Math.floor(Math.random() * (window.innerWidth-200));
-            var y = Math.floor(Math.random() * (window.innerHeight-200));
+            if(count == 20 ) {
+                document.getElementById("message").innerHTML = "Therm therm này... :(";
+                document.getElementById("vomong-gif").src = "./gif/hontruocmat.gif";
+            }
+            var x = Math.floor(Math.random() * (window.innerWidth-250));
+            var y = Math.floor(Math.random() * (window.innerHeight-250));
             document.getElementById("btnNo").style.left = x + "px";
             document.getElementById("btnNo").style.top = y + "px";
             document.getElementById("test").innerHTML= window.innerWidth;
         } else {
+            document.getElementById("message").innerHTML = "Láo nháo thế nhờ:) <br>Ko nhớ cũng phải nhớ thôi ;)";
+            document.getElementById("namlen-gif"    ).style.opacity = 1;
+            document.getElementById("namlen-gif").src = "./gif/loive.gif";
             var myobj = document.getElementById("btnNo");
             myobj.remove();
-
         }
-       
-       
     }
 </script>
 </html>
