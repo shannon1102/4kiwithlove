@@ -18,7 +18,7 @@
             <!-- <img src="logo.png"> -->
             <p id="title">Ko dỗi anh nữaaaaaaaaa :((</p>
             <p id="message"></p>
-            <img src="./gif/khoc.gif" id="head-image" alt="status-image"  width="300" height="300"/>    
+            <img src="./gif/meoxanhkhoc.gif" id="head-image" alt="status-image"  width="300" height="300"/>    
         </div>
         <div id="footer-gif">
             <div id="vomong-div"> 
@@ -44,11 +44,13 @@
     let count = 0; 
     function yesClick() {
         document.getElementById("title").innerHTML = "";
-        document.getElementById("head-image").src = "./gif/winksideeye.gif";
-        document.getElementById("vomong-gif").src = "./gif/leuleu.gif";
-        document.getElementById("namlen-gif").src = "./gif/leuleu.gif";
-        document.getElementById("message").innerHTML = "Á Há Há :3 <br> Dễ  hết dỗi thế :33333 <br> Dỗi anh cũng có quan tâm đâu :D";
+        document.getElementById("head-image").src = "./gif/meoxanhliemliem.gif";
+        document.getElementById("vomong-gif").src = "./gif/meoxanhthethe.gif";
+        document.getElementById("namlen-gif").src = "./gif/meoxanhthethe.gif";
+        document.getElementById("message").innerHTML = "Anh cũng yêu emm nhất :33333 <br>Ahhhhhhhhhhh Nhanhhhhhhhhh:(((<br>Annhhhhhh banqua :(((";
+        document.getElementById("message").style.color ="red";
         document.getElementById("head-image").style.opacity = 1;
+        document.getElementById("footer-gif").style.justifyContent = "space-around";
         document.getElementById("vomong-gif").style.opacity = 1;
         document.getElementById("namlen-gif").style.opacity = 1;
 
@@ -69,32 +71,32 @@
               
             } 
             if(count == 4 ) {
-                document.getElementById("message").innerHTML = "Vợ... :( <br> Đấm lưng  cho em nè :(";
+                document.getElementById("message").innerHTML = "Thôi mà vợ yêu :(( <br>Mát xa mông em nè :(";
                 
                 document.getElementById("vomong-gif").style.opacity = 1;
                 document.getElementById("vomong-gif").src = "./gif/vomong.gif";
                 
             }
             if(count == 8 ) {
-                document.getElementById("message").innerHTML = "Thôi mà... :( <br> Cõng bé nè :(( ";
+                document.getElementById("message").innerHTML = "Oaaaaaaaaaa:((( <br> Cõng bé nè :(( ";
                 document.getElementById("vomong-gif").src = "./gif/cat1.gif";
                 document.getElementById("head-image").style.opacity = 1;
 
             }
             if(count == 12 ) {
-                document.getElementById("message").innerHTML = "Bế  bế em này... :(";
+                document.getElementById("message").innerHTML = "Ôm bé :3 <br>Bế em xoay tròn này:((";
                 document.getElementById("head-image").style.opacity = 0;
                 document.getElementById("vomong-gif").src = "./gif/bexoayvong.gif";
 
             }
             if(count == 16 ) {
-                document.getElementById("message").innerHTML = "Xoay tròn nè... :(";
-
+                document.getElementById("message").innerHTML = "Áp tay vào má em này:(((";
+                document.getElementById("vomong-gif").src = "./gif/veoma.gif";
 
             }
             if(count == 20 ) {
-                document.getElementById("message").innerHTML = "therm therm... <br> Chụt Chụt Chụt <3";
-                document.getElementById("vomong-gif").src = "./gif/hontruocmat.gif";
+                document.getElementById("message").innerHTML = "Therm therm... <br> Chụt chụt này :3";
+                document.getElementById("vomong-gif").src = "./gif/meoxanhhonchumo.gif";
             }
             var x = Math.floor(Math.random() * (window.innerWidth-250));
             var y = Math.floor(Math.random() * (window.innerHeight-250));
@@ -102,9 +104,9 @@
             document.getElementById("btnNo").style.top = y + "px";
             document.getElementById("test").innerHTML= window.innerWidth;
         } else {
-            document.getElementById("message").innerHTML = "Láo nháo thế nhờ:) <br> Ai cho dỗi ;)";
+            document.getElementById("message").innerHTML = "Láo nháo thế nhờ:)) <br> Ai cho dỗi mà dỗi :) <br> Có yêu koo :))";
             document.getElementById("namlen-gif"    ).style.opacity = 1;
-            document.getElementById("namlen-gif").src = "./gif/loive.gif";
+            document.getElementById("namlen-gif").src = "./gif/meoxanhkeotai.gif";
             var myobj = document.getElementById("btnNo");
             myobj.remove();
         }
