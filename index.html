@@ -7,33 +7,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- <h1 id="loveQuestion" style="font: Brush Script MT;">Thôi đừng có dỗi nữa mà :((</h1> -->
     <div id="container">
         <div id="head-container">
             <!-- <img src="logo.png"> -->
-            <p id="title">Nhớ anh nhiù ko:D</p>
+            <p id="title">Ko dỗi anh nữaaaaaaaaa :((</p>
             <p id="message"></p>
-            <img src="./gif/khoc.gif" id="head-image" alt="status-image"  width="300" height="300"/>
-            <!-- <img src="" id="head-image" alt="status-image"  width="250" /> -->
-    
+            <img src="./gif/khoc.gif" id="head-image" alt="status-image"  width="300" height="300"/>    
         </div>
         <div id="footer-gif">
             <div id="vomong-div"> 
-                <img src="./gif/vomong.gif" alt="vomong" id="vomong-gif" width="450" height="550" />
+                <img src="./gif/vomong.gif" alt="vomong" id="vomong-gif" width="450" height="600" />
 
             </div>
-            <div id="namlen-div"    >
-                <img src="./gif/cat1.gif" alt="namlen" id="namlen-gif"  width="450" height="550"/>
+            <div id="namlen-div">
+                <img src="./gif/cat1.gif" alt="namlen" id="namlen-gif"  width="450" height="600"/>
             </div>
             
             <!-- <img src="./gif/vomong.gif" alt="vomong" id="vomong"  width="450" /> -->
         </div>
 
     </div>
-    <input type="button" id="btnYes" value="Có! Nhớ anh đến chết <3" onclick="yesClick()"/>
-    <input type="button" id="btnNo" value="Không!!! Ghéttttt" onmouseover="noHover()"/>
+    <input type="button" id="btnYes" value="Dạ!!Em yêu anh nhất nạ <3" onclick="yesClick()"/>
+    <input type="button" id="btnNo" value="Dỗi !!! Ghéttttt" onmouseover="noHover()"/>
     <audio controls autoplay>
         <source src="./audio/tinhyeukhunglong.mp3" type="audio/mpeg">
     </audio>
@@ -42,27 +43,33 @@
 <script>
     let count = 0; 
     function yesClick() {
-        document.getElementById("head-image").src = "./gif/leuleu.gif";
+        document.getElementById("title").innerHTML = "";
+        document.getElementById("head-image").src = "./gif/winksideeye.gif";
         document.getElementById("vomong-gif").src = "./gif/leuleu.gif";
         document.getElementById("namlen-gif").src = "./gif/leuleu.gif";
-        document.getElementById("message").innerHTML = "Á Há Há :3 <br> Anh có nhớ emm đâu:33333";
+        document.getElementById("message").innerHTML = "Á Há Há :3 <br> Dễ  hết dỗi thế :33333 <br> Dỗi anh cũng có quan tâm đâu :D";
         document.getElementById("head-image").style.opacity = 1;
+        document.getElementById("vomong-gif").style.opacity = 1;
+        document.getElementById("namlen-gif").style.opacity = 1;
+
         var yesBtn = document.getElementById("btnYes");
-        // var x = document.getElementById("myAudio");
-        // x.pause();
         yesBtn.remove();
+        var myobj = document.getElementById("btnNo");
+
+        myobj.remove();
+       
     }
 
     function noHover() {
         count++;
-        if(count <22 ) {
+        if(count <25 ) {
             if(count == 1) {
-                document.getElementById("btnYes").style.left =  "860px";
+                document.getElementById("btnYes").style.left =  "820px";
                 document.getElementById("btnYes").style.top =  "450px";
               
             } 
             if(count == 4 ) {
-                document.getElementById("message").innerHTML = "Vợ... :( <br>Đấm lưng cho em nè :(";
+                document.getElementById("message").innerHTML = "Vợ... :( <br> Đấm lưng  cho em nè :(";
                 
                 document.getElementById("vomong-gif").style.opacity = 1;
                 document.getElementById("vomong-gif").src = "./gif/vomong.gif";
@@ -81,12 +88,12 @@
 
             }
             if(count == 16 ) {
-                document.getElementById("message").innerHTML = "Ôm emm này... :(";
+                document.getElementById("message").innerHTML = "Xoay tròn nè... :(";
 
 
             }
             if(count == 20 ) {
-                document.getElementById("message").innerHTML = "Therm therm này... :(";
+                document.getElementById("message").innerHTML = "therm therm... <br> Chụt Chụt Chụt <3";
                 document.getElementById("vomong-gif").src = "./gif/hontruocmat.gif";
             }
             var x = Math.floor(Math.random() * (window.innerWidth-250));
@@ -95,7 +102,7 @@
             document.getElementById("btnNo").style.top = y + "px";
             document.getElementById("test").innerHTML= window.innerWidth;
         } else {
-            document.getElementById("message").innerHTML = "Láo nháo thế nhờ:) <br>Ko nhớ cũng phải nhớ thôi ;)";
+            document.getElementById("message").innerHTML = "Láo nháo thế nhờ:) <br> Ai cho dỗi ;)";
             document.getElementById("namlen-gif"    ).style.opacity = 1;
             document.getElementById("namlen-gif").src = "./gif/loive.gif";
             var myobj = document.getElementById("btnNo");
