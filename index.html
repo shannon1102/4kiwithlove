@@ -1,87 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="vi">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <!--
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  -->
-  <title>Tặng cậu</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-
-  <script type="text/javascript" charset="utf-8">
-    function hasClassName(inElement, inClassName) {
-      var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
-      return regExp.test(inElement.className);
-    }
-
-    function addClassName(inElement, inClassName) {
-      if (!hasClassName(inElement, inClassName))
-        inElement.className = [inElement.className, inClassName].join(' ');
-    }
-
-    function removeClassName(inElement, inClassName) {
-      if (hasClassName(inElement, inClassName)) {
-        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
-        var curClasses = inElement.className;
-        inElement.className = curClasses.replace(regExp, ' ');
-      }
-    }
-
-    function toggleClassName(inElement, inClassName) {
-      if (hasClassName(inElement, inClassName))
-        removeClassName(inElement, inClassName);
-      else
-        addClassName(inElement, inClassName);
-    }
-
-    function toggleShape() {
-      var shape = document.getElementById('shape');
-      if (hasClassName(shape, 'ring')) {
-        removeClassName(shape, 'ring');
-        addClassName(shape, 'cube');
-      } else {
-        removeClassName(shape, 'cube');
-        addClassName(shape, 'ring');
-      }
-
-      var stage = document.getElementById('stage');
-      if (hasClassName(shape, 'ring'))
-        stage.style.webkitTransform = 'translateZ(-200px)';
-      else
-        stage.style.webkitTransform = '';
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
-
 <body>
+    <!-- <h1 id="loveQuestion" style="font: Brush Script MT;">Thôi đừng có dỗi nữa mà :((</h1> -->
+    <div id="head-container">
+        <!-- <img src="logo.png"> -->
+        <h1 id="title">Hehe :3</h1>
+        <img src="khoc.gif" id="head-image" alt="status-image"  width="350" style="background-color: transparent"/>
+        <!-- <img src="" id="head-image" alt="status-image"  width="250" /> -->
 
-  <div style="text-align: right;padding: 15px;"><a href="#" class="classname" onclick="toggleShape()">Đổi kiểu</a></div>
 
-  <div id="container">
-    <div id="stage">
-      <div id="shape" class="cube backfaces">
-        <div class="plane one"></div>
-        <div class="plane two"></div>
-        <div class="plane three"></div>
-        <div class="plane four"></div>
-        <div class="plane five"></div>
-        <div class="plane six"></div>
-        <div class="plane seven"></div>
-        <div class="plane eight"></div>
-        <div class="plane nine"></div>
-        <div class="plane ten"></div>
-        <div class="plane eleven"></div>
-        <div class="plane twelve"></div>
-      </div>
     </div>
-  </div>
-<audio controls autoplay loop preload="auto">
-  <source src="audio.mp3" type="audio/mp3" >
-  Your browser does not support the audio element.
-</audio>
+    <!-- <div>
+        <img src="logo.png">
+        <img src="khoc.gif" id="head-image" alt="status-image"  width="250" />
+        <img src="" id="head-image" alt="status-image"  width="250" />
+    </div> -->
+
+
+    <input type="button" id="btnYes" value="CÓ" onclick="yesClick()"/>
+    <input type="button" id="btnNo" value="KHÔNG" onmouseover="noHover()"/>
+
+    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" />
+    <img src="leuleu.gif" alt="this slowpoke moves"  width="250" />  -->
+    <img src="vomong.gif" alt="this slowpoke moves"  width="550" />
+    <img src="cat1.gif" alt="this slowpoke moves"  width="550" />
+    <img src="vomong.gif" alt="this slowpoke moves"  width="550" />
+    <!-- <img src="cat1.gif" alt="this slowpoke moves"  width="550" /> -->
+    <!-- <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="leuleu.gif" alt="this slowpoke moves"  width="250" />
+    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
+    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
+    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
+    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
+    <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="leuleu.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
+    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
+    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
+    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
+    <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="laonhao.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="leuleu.gif" alt="this slowpoke moves"  width="250" /> -->
+    <!-- <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
+    <img src="cat1.gif" alt="this slowpoke moves"  width="250" />
+    <img src="vomong.gif" alt="this slowpoke moves"  width="250" />
+    <img src="cat1.gif" alt="this slowpoke moves"  width="250" /> -->
 </body>
+<script>
+    let count = 0; 
+    function yesClick() {
+        // alert("Tối nay, lên hồ chơi em nhé!");
+        document.getElementById("head-image").src = "tungtim.gif";
+    }
+
+    function noHover() {
+        count++;
+        if(count <20 ) {
+            if(count == 1) {
+                document.getElementById("btnYes").style.left =  "860px";
+                document.getElementById("btnYes").style.top =  "450px";
+            } 
+            if(count %4 == 0) {
+
+
+            }
+            var x = Math.floor(Math.random() * (window.innerWidth-200));
+            var y = Math.floor(Math.random() * (window.innerHeight-200));
+            document.getElementById("btnNo").style.left = x + "px";
+            document.getElementById("btnNo").style.top = y + "px";
+            document.getElementById("test").innerHTML= window.innerWidth;
+        } else {
+            var myobj = document.getElementById("btnNo");
+            myobj.remove();
+
+        }
+       
+       
+    }
+</script>
 </html>
